@@ -1,4 +1,6 @@
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 import { FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 
 const educationData = [
@@ -21,17 +23,33 @@ const educationData = [
 ];
 
 const EducationSkillsSection = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Animation easing
+      once: true, // Trigger animation only once
+    });
+  }, []);
+
   return (
-    <section className="py-16 bg-[#0f1629] text-white">
+    <section id="education" className="py-16 bg-[#0f1629] text-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Education Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold text-center mb-8">Education</h2>
+          <h2
+            className="text-3xl font-semibold text-center mb-8"
+            data-aos="fade-up"
+          >
+            Education
+          </h2>
           <div className="flex items-stretch w-10/12 mx-auto gap-8">
             {educationData.map((item, index) => (
               <div
                 key={index}
                 className="bg-[#1e2639] border-4 border-[#38bdf8] rounded-lg p-6 flex-1 transition-transform duration-300 transform hover:scale-105"
+                data-aos="fade-right"
+                data-aos-delay={`${index * 200}`} // Stagger animation for items
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-[#38bdf8] flex justify-center items-center">
@@ -47,7 +65,6 @@ const EducationSkillsSection = () => {
                 <p className="text-gray-300">{item.description}</p>
               </div>
             ))}
-            {/* Vertical Divider */}
           </div>
         </div>
       </div>

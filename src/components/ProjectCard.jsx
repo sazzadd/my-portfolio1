@@ -1,4 +1,6 @@
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 import { FaExternalLinkAlt, FaGithub, FaInfoCircle } from "react-icons/fa";
 
 const projects = [
@@ -6,9 +8,9 @@ const projects = [
     id: 1,
     title: "Car Rental Web App",
     description:
-      " Car Rental System! This is a feature-rich platform designed to provide a seamless car rental experience.  Facilitate easy management of cars for rent.",
+      "Car Rental System! This is a feature-rich platform designed to provide a seamless car rental experience. Facilitate easy management of cars for rent.",
     techStack: "React, Express, MongoDB, Firebase",
-    image: "https://i.ibb.co.com/3h8y7pg/Screenshot-2025-01-04-232008.png", // Replace with your image URL
+    image: "https://i.ibb.co/3h8y7pg/Screenshot-2025-01-04-232008.png",
     livePreview: "https://b10a11-car-rental.surge.sh/",
     viewCode: "https://github.com/sazzadd/car-rental-client-site.git",
   },
@@ -18,27 +20,39 @@ const projects = [
     description:
       "Chill Gamer is a platform for exploring and sharing game reviews. Users can view, add, and filter reviews based on their preferences, helping fellow gamers find the best games to play. This application is built using modern web technologies to ensure a seamless and engaging experience.",
     techStack: "React, Express, MongoDB, Firebase",
-    image: "https://i.ibb.co.com/WzYGTwm/Screenshot-2025-01-04-233235.png", 
+    image: "https://i.ibb.co/WzYGTwm/Screenshot-2025-01-04-233235.png",
     livePreview: "https://b10a10-chill-gamer.surge.sh/",
     viewCode: "https://github.com/sazzadd/game-review--client.git",
   },
   {
     id: 3,
-    title: " Coupon Collecting Application",
+    title: "Coupon Collecting Application",
     description:
-      "This is a sample project description. Random things are here in description. This is a sample project lorem ipsum generator for dummy content.",
-    techStack: "HTML, JavaScript, SASS, React",
-    image: "https://i.ibb.co.com/2FgnNrD/Screenshot-2025-01-04-235812.png", 
+      "Discount PRO helps users find and use discount coupons for e-commerce shops in Bangladesh. With features like brand details, user authentication, and a responsive design, View brand-specific coupons and categories, it's built to help users save more!",
+    techStack: "React, Express, MongoDB, Firebase",
+    image: "https://i.ibb.co/2FgnNrD/Screenshot-2025-01-04-235812.png",
     livePreview: "https://b10a9-7fca5.web.app/",
-    viewCode: "https://github.com/programming-hero-web-course1/b10-a9-authentication-sazzadd.git",
+    viewCode:
+      "https://github.com/programming-hero-web-course1/b10-a9-authentication-sazzadd.git",
   },
 ];
 
 const ProjectCard = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <div className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center px-12 py-16">
+    <div  id="projects" className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center px-12 py-16">
       {/* Section Title */}
-      <div className="text-center mb-12">
+      <div
+        className="text-center mb-12"
+        data-aos="fade-down"
+        data-aos-duration="1200"
+      >
         <h1 className="text-4xl font-bold text-[#38bdf8] tracking-wide uppercase">
           Projects
         </h1>
@@ -49,17 +63,24 @@ const ProjectCard = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 w-9/12 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div
+       
+        className="grid  grid-cols-1 w-9/12 md:grid-cols-2 lg:grid-cols-3 gap-12"
+        data-aos="fade-up"
+      >
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#1E263B] text-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#38bdf8]"
+            className="bg-[#1E263B] text-gray-100 rounded-lg overflow-hidden shadow-md border border-[#38bdf8] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:border-blue-500"
+            data-aos="zoom-in"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-56 object-cover"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-56 object-cover transform transition-transform duration-300 hover:scale-110"
+              />
+            </div>
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-400 mb-4 text-sm">

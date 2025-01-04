@@ -5,6 +5,7 @@ import Navbar from "../components/NavBar";
 import Skills from "../components/Skills";
 import EducationSkillsSection from "../components/EducationSkillsSection";
 import ProjectCard from "../components/ProjectCard";
+import ContactForm from "../components/ContactForm";
 const Home = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const Home = () => {
       <Skills></Skills>
       <EducationSkillsSection></EducationSkillsSection>
       <ProjectCard></ProjectCard>
+      <ContactForm></ContactForm>
     </div>
   );
 };

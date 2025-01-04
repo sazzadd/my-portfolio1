@@ -30,12 +30,7 @@ const Navbar = () => {
               <span className="hidden sm:inline">Skills</span>
             </a>
           </li>
-          <li className="flex items-center space-x-2 cursor-pointer transition-all duration-300 hover:bg-[#38bdf8] hover:text-white hover:scale-105 p-2 rounded-full">
-            <a href="#experience" className="flex items-center space-x-2">
-              <FaBriefcase className="text-lg sm:text-base" />
-              <span className="hidden sm:inline">Experience</span>
-            </a>
-          </li>
+          
           <li className="flex items-center space-x-2 cursor-pointer transition-all duration-300 hover:bg-[#38bdf8] hover:text-white hover:scale-105 p-2 rounded-full">
             <a href="#education" className="flex items-center space-x-2">
               <FaGraduationCap className="text-lg sm:text-base" />

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Card, Typography } from "@material-tailwind/react";
 import {
   FaCss3Alt,
@@ -6,6 +7,8 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const skills = [
   {
@@ -47,9 +50,17 @@ const skills = [
 ];
 
 const Skills = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing function
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <div id="skills" className="bg-[#0f1629]   text-white py-8 flex items-center justify-center">
-      <a href="#skill"></a>
+    <div id="skills" className="bg-[#0f1629] text-white py-8 flex items-center justify-center">
       <Card className="container mx-auto px-6 lg:px-20 py-10 bg-transparent shadow-xl rounded-2xl">
         <Typography
           variant="h3"
@@ -63,6 +74,8 @@ const Skills = () => {
             <div
               key={index}
               className="bg-[#1e2436] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay={`${index * 100}`} // Adding delay for staggered animations
             >
               <div className="flex justify-between items-center mb-4">
                 <div className="flex items-center space-x-4">
