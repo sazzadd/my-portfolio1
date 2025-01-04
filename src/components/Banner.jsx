@@ -50,7 +50,7 @@ const Banner = () => {
       }}
     >
       <div
-        className="hero flex justify-between w-11/12 mx-auto items-center"
+        className="hero flex justify-between w-10/12 mx-auto items-center"
         style={{
           backgroundImage: `linear-gradient(to top left, #0b1221 60%, #112836 100%)`,
         }}
