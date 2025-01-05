@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   const handleType = (count) => {
-    console.log(count); // Log word count while typing
+    // console.log(count); // Log word count while typing
   };
 
   const handleDone = () => {
