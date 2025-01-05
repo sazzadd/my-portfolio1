@@ -16,7 +16,7 @@ const Banner = () => {
 
   useEffect(() => {
     hljs.highlightAll();
-  }, []); 
+  }, []);
 
   const codeSnippet = `
   const profile = {
@@ -54,7 +54,12 @@ const Banner = () => {
           <p id="banner-subtitle" className="text-lg mt-4">
             <span style={{ color: "#38bdf8", fontWeight: "bold" }}>
               <Typewriter
-                words={["I am a frontend web developer", "Sleep", "Code", "Repeat!"]}
+                words={[
+                  "I am a frontend web developer",
+                  "Sleep",
+                  "Code",
+                  "Repeat!",
+                ]}
                 loop={5}
                 cursor
                 cursorStyle="_"
@@ -67,17 +72,19 @@ const Banner = () => {
             </span>
           </p>
 
-          <button
-            className="mt-6 px-6 py-3 bg-gradient-to-r from-[#10b981] to-[#38bdf8] text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center hover:bg-gradient-to-l hover:from-[#38bdf8] hover:to-[#10b981]"
+          <a
+            href="CV_of_CHOWDHURY_SAZZAD_HOSSAIN (3).pdf" 
+            download="Resume" 
+            className="mt-6 w-[180px] py-2 bg-gradient-to-r from-[#10b981] to-[#38bdf8] text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center hover:bg-gradient-to-l hover:from-[#38bdf8] hover:to-[#10b981]"
           >
             <AiOutlineDownload className="mr-2 text-xl" />
             Download Resume
-          </button>
+          </a>
 
           {/* Social Icons Section */}
           <div className="flex justify-center lg:justify-start mt-6 space-x-4">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/sazzadador/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#38bdf8] hover:text-white border-2 border-[#10b981] rounded-full p-3 transition-all duration-300 ease-in-out hover:scale-110"
@@ -85,7 +92,7 @@ const Banner = () => {
               <FaLinkedinIn className="text-2xl" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/sazzadd"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#38bdf8] hover:text-white border-2 border-[#10b981] rounded-full p-3 transition-all duration-300 ease-in-out hover:scale-110"
@@ -93,7 +100,7 @@ const Banner = () => {
               <FaGithub className="text-2xl" />
             </a>
             <a
-              href="https://wa.me"
+              href="https://wa.me/+01705799384"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#38bdf8] hover:text-white border-2 border-[#10b981] rounded-full p-3 transition-all duration-300 ease-in-out hover:scale-110"
