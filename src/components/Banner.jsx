@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Banner = () => {
   const handleType = (count) => {
@@ -17,7 +18,8 @@ const Banner = () => {
   useEffect(() => {
     hljs.highlightAll();
   }, []);
-
+  const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
+  `;
   const codeSnippet = `
   const profile = {
     name: 'Sazzad Hossain',
@@ -50,7 +52,7 @@ const Banner = () => {
           <h1 className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8] mt-2">
             I am Sazzad Hossain
           </h1>
-
+          <TextGenerateEffect words={words} />
           <p id="banner-subtitle" className="text-lg mt-4">
             <span style={{ color: "#38bdf8", fontWeight: "bold" }}>
               <Typewriter
