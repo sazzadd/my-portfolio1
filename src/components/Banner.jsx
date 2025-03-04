@@ -5,6 +5,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import gsap from "gsap";
 
 const Banner = () => {
   const handleType = (count) => {
@@ -48,7 +49,10 @@ const Banner = () => {
       <div className="hero flex flex-col lg:flex-row justify-between w-10/12 mx-auto items-center py-10">
         <div className="w-full lg:w-1/2 px-6 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold">Hello</h1>
-          <h1 className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8] mt-2">
+          <h1 
+          onMouseEnter={()=>gsap.to("#cursor", {scale:4 ,duration:0.3})}
+          onMouseLeave={()=>gsap.to("#cursor", {scale:1 ,duration:0.3})}
+          className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8] mt-2">
             I am Sazzad Hossain
           </h1>
           <TextGenerateEffect words={words} />

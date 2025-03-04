@@ -1,11 +1,11 @@
 import React from "react";
 import About from "../components/About";
 import Banner from "../components/Banner";
-import Navbar from "../components/NavBar";
-import Skills from "../components/Skills";
-import EducationSkillsSection from "../components/EducationSkillsSection";
-import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
+import EducationSkillsSection from "../components/EducationSkillsSection";
+import Navbar from "../components/NavBar";
+import ProjectCard from "../components/ProjectCard";
+import Skills from "../components/Skills";
 const Home = () => {
   return (
     <div>
