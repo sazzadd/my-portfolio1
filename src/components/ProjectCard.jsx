@@ -1,41 +1,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaGithub, FaInfoCircle } from "react-icons/fa";
-
-const projects = [
-  {
-    id: 1,
-    title: "Car Rental Web App",
-    description:
-      "Car Rental System! This is a feature-rich platform designed to provide a seamless car rental experience. Facilitate easy management of cars for rent.",
-    techStack: "React, Express, MongoDB, Firebase",
-    image: "https://i.ibb.co/3h8y7pg/Screenshot-2025-01-04-232008.png",
-    livePreview: "https://b10a11-car-rental.surge.sh/",
-    viewCode: "https://github.com/sazzadd/car-rental-client-site.git",
-  },
-  {
-    id: 2,
-    title: "Chill Gamer",
-    description:
-      "Chill Gamer is a platform for exploring and sharing game reviews. Users can view, add, and filter reviews based on their preferences, helping fellow gamers find the best games to play. This application is built using modern web technologies to ensure a seamless and engaging experience.",
-    techStack: "React, Express, MongoDB, Firebase",
-    image: "https://i.ibb.co/WzYGTwm/Screenshot-2025-01-04-233235.png",
-    livePreview: "https://b10a10-chill-gamer.surge.sh/",
-    viewCode: "https://github.com/sazzadd/game-review--client.git",
-  },
-  {
-    id: 3,
-    title: "Coupon Collecting Application",
-    description:
-      "Discount PRO helps users find and use discount coupons for e-commerce shops in Bangladesh. With features like brand details, user authentication, and a responsive design, View brand-specific coupons and categories, it's built to help users save more!",
-    techStack: "React, Express, MongoDB, Firebase",
-    image: "https://i.ibb.co/2FgnNrD/Screenshot-2025-01-04-235812.png",
-    livePreview: "https://b10a9-7fca5.web.app/",
-    viewCode:
-      "https://github.com/programming-hero-web-course1/b10-a9-authentication-sazzadd.git",
-  },
-];
+import { Link } from "react-router-dom";
 
 const ProjectCard = () => {
   useEffect(() => {
@@ -44,9 +11,21 @@ const ProjectCard = () => {
       once: true, // Whether animation should happen only once
     });
   }, []);
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    fetch("/project.json")
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .then((error) => console.log(error));
+  }, []);
 
   return (
-    <div  id="projects" className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center px-12 py-16">
+    <div
+      id="projects"
+      className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center px-12 py-16"
+    >
       {/* Section Title */}
       <div
         className="text-center mb-12"
@@ -64,7 +43,6 @@ const ProjectCard = () => {
 
       {/* Project Cards */}
       <div
-       
         className="grid  grid-cols-1 w-9/12 md:grid-cols-2 lg:grid-cols-3 gap-12"
         data-aos="fade-up"
       >
@@ -109,9 +87,11 @@ const ProjectCard = () => {
                 </a>
               </div>
               <div className="text-center">
-                <button className="bg-[#38bdf8] text-gray-900 px-4 py-2 rounded-md flex items-center justify-center w-full hover:bg-blue-400 transition-colors duration-300">
-                  <FaInfoCircle className="mr-2" /> View Details
-                </button>
+                <Link to={`/project/${project.id}`}>
+                  <a className="bg-[#38bdf8] text-gray-900 px-4 py-2 rounded-md flex items-center justify-center w-full hover:bg-blue-400 transition-colors duration-300">
+                    <FaInfoCircle className="mr-2" /> View Details
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

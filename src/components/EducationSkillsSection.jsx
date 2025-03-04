@@ -1,24 +1,16 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
-import { FaGraduationCap, FaLaptopCode } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 
 const educationData = [
   {
     title: "Bachelor of Science in Computer Science",
-    institution: "XYZ University",
-    duration: "2018 - 2022",
+    institution: "Atish Dipankar University of Science & Technology",
+    duration: "2018 - 2023",
     description:
       "Graduated with honors, focusing on full-stack development and AI.",
     icon: <FaGraduationCap className="text-white text-3xl" />,
-  },
-  {
-    title: "Master's in Artificial Intelligence",
-    institution: "ABC University",
-    duration: "2023 - Present",
-    description:
-      "Currently pursuing my Master's degree with a focus on machine learning and deep learning.",
-    icon: <FaLaptopCode className="text-white text-3xl" />,
   },
 ];
 
@@ -34,6 +26,7 @@ const EducationSkillsSection = () => {
 
   return (
     <section id="education" className="py-16 bg-[#0f1629] text-white">
+    
       <div className="max-w-7xl mx-auto px-6">
         {/* Education Section */}
         <div className="mb-16">

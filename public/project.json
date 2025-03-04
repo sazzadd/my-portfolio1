@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Car Rental Web App ddddddddd",
+    "description": "Car Rental System! This is a feature-rich platform designed to provide a seamless car rental experience. Facilitate easy management of cars for rent.",
+    "techStack": "React, Express, MongoDB, Firebase",
+    "image": "https://i.ibb.co/3h8y7pg/Screenshot-2025-01-04-232008.png",
+    "livePreview": "https://b10a11-car-rental.surge.sh/",
+    "viewCode": "https://github.com/sazzadd/car-rental-client-site.git",
+  
+    "limitations": [
+      "Limited payment gateway integration",
+      "No real-time vehicle tracking",
+      "Admin panel lacks advanced analytics"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Chill Gamer",
+    "description": "Chill Gamer is a platform for exploring and sharing game reviews. Users can view, add, and filter reviews based on their preferences, helping fellow gamers find the best games to play. This application is built using modern web technologies to ensure a seamless and engaging experience.",
+    "techStack": "React, Express, MongoDB, Firebase",
+    "image": "https://i.ibb.co/WzYGTwm/Screenshot-2025-01-04-233235.png",
+    "livePreview": "https://b10a10-chill-gamer.surge.sh/",
+    "viewCode": "https://github.com/sazzadd/game-review--client.git",
+    "limitations": [
+      "No user profile customization",
+      "Limited review moderation features",
+      "No multiplayer community interactions"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Coupon Collecting Application",
+    "description": "Discount PRO helps users find and use discount coupons for e-commerce shops in Bangladesh. With features like brand details, user authentication, and a responsive design, View brand-specific coupons and categories, it's built to help users save more!",
+    "techStack": "React, Express, MongoDB, Firebase",
+    "image": "https://i.ibb.co/2FgnNrD/Screenshot-2025-01-04-235812.png",
+    "livePreview": "https://b10a9-7fca5.web.app/",
+    "viewCode": "https://github.com/programming-hero-web-course1/b10-a9-authentication-sazzadd.git",
+    "limitations": [
+      "Limited to Bangladesh region",
+      "No automatic coupon expiration tracking",
+      "No push notification support for new deals"
+    ]
+  }
+]
