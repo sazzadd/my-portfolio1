@@ -87,7 +87,7 @@ const Banner = () => {
           </a>
 
           {/* Social Icons Section */}
-          <div className="flex justify-center lg:justify-start mt-6 space-x-4">
+          <div className="flex floating justify-center lg:justify-start mt-6 space-x-4">
             <a
               href="https://www.linkedin.com/in/sazzadador/"
               target="_blank"
