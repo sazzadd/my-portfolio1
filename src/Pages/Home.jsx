@@ -6,6 +6,7 @@ import EducationSkillsSection from "../components/EducationSkillsSection";
 import Navbar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
 import Skills from "../components/Skills";
+import Toolkit from "../components/Toolkit";
 const Home = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <About></About>
       <Skills></Skills>
+      <Toolkit></Toolkit>
       <EducationSkillsSection></EducationSkillsSection>
       <ProjectCard></ProjectCard>
       <ContactForm></ContactForm>
