@@ -1,5 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import gsap from "gsap";
 import React, { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaGithub, FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -32,7 +33,11 @@ const ProjectCard = () => {
         data-aos="fade-down"
         data-aos-duration="1200"
       >
-        <h1 className="text-4xl font-bold text-[#38bdf8] tracking-wide uppercase">
+        <h1
+          className="text-4xl font-bold text-[#38bdf8] tracking-wide uppercase"
+          onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+          onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+        >
           Projects
         </h1>
         <p className="text-gray-400 mt-2 text-sm">
@@ -46,7 +51,7 @@ const ProjectCard = () => {
         className="grid  grid-cols-1 w-9/12 md:grid-cols-2 lg:grid-cols-3 gap-12"
         data-aos="fade-up"
       >
-        {projects.slice(0,3).map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <div
             key={project.id}
             className="bg-[#1E263B] text-gray-100 rounded-lg overflow-hidden shadow-md border border-[#38bdf8] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:border-blue-500"
@@ -62,7 +67,9 @@ const ProjectCard = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-400 mb-4 text-sm">
-              {project.description.length > 100 ? project.description.substring(0, 100) + "..." : project.description}
+                {project.description.length > 100
+                  ? project.description.substring(0, 100) + "..."
+                  : project.description}
               </p>
               <p className="text-gray-300 mb-4 text-sm">
                 <span className="font-bold">Tech stack :</span>{" "}

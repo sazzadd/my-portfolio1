@@ -1,5 +1,8 @@
-import React, { useEffect } from "react";
 import { Card, Typography } from "@material-tailwind/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import gsap from "gsap";
+import React, { useEffect } from "react";
 import {
   FaCss3Alt,
   FaDatabase,
@@ -7,8 +10,6 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const skills = [
   {
@@ -60,11 +61,16 @@ const Skills = () => {
   }, []);
 
   return (
-    <div id="skills" className="bg-[#0f1629] text-white py-8 flex items-center justify-center">
+    <div
+      id="skills"
+      className="bg-[#0f1629] text-white py-8 flex items-center justify-center"
+    >
       <Card className="container mx-auto px-6 lg:px-20 py-10 bg-transparent shadow-xl rounded-2xl">
         <Typography
           variant="h3"
           className="font-bold text-[#38bdf8] text-center mb-12 text-3xl"
+          onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+          onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
         >
           My Skills
         </Typography>

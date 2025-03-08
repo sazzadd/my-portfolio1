@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css"; // highlight.js style import
 import React, { useEffect } from "react";
@@ -5,7 +6,6 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import gsap from "gsap";
 
 const Banner = () => {
   const handleType = (count) => {
@@ -25,14 +25,14 @@ const Banner = () => {
     name: 'Sazzad Hossain',
     title: 'Fontend web  Developer | Problem Solver| Artist',
     skills: [
-        'React', 'Express',
-        'MongoDB', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+        'HTML', 'CSS',"JavaScript"
+        'React', 'ExpressJS', 'MongoDB',
+        'GraphQL', 'Git', 'Linux', 
     ],
     hardWorker: true,
-    quickLearner: true,
+
     problemSolver: true,
-    yearsOfExperience: 4, 
+    yearsOfExperience: 1, 
     hireable: function() {
         return (
             this.hardWorker &&
@@ -49,10 +49,11 @@ const Banner = () => {
       <div className="hero flex flex-col lg:flex-row justify-between w-10/12 mx-auto items-center py-10">
         <div className="w-full lg:w-1/2 px-6 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold">Hello</h1>
-          <h1 
-          onMouseEnter={()=>gsap.to("#cursor", {scale:4 ,duration:0.3})}
-          onMouseLeave={()=>gsap.to("#cursor", {scale:1 ,duration:0.3})}
-          className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8] mt-2">
+          <h1
+            onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+            onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+            className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8] mt-2"
+          >
             I am Sazzad Hossain
           </h1>
           <TextGenerateEffect words={words} />
@@ -78,8 +79,8 @@ const Banner = () => {
           </p>
 
           <a
-            href="CV_of_CHOWDHURY_SAZZAD_HOSSAIN (3).pdf"
-            download="Resume"
+            href="Resume.pdf"
+            download="Sazzad_Hossain_Resume.pdf"
             className="mt-6 w-[180px] py-2 bg-gradient-to-r from-[#10b981] to-[#38bdf8] text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center hover:bg-gradient-to-l hover:from-[#38bdf8] hover:to-[#10b981]"
           >
             <AiOutlineDownload className="mr-2 text-xl" />

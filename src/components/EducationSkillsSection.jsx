@@ -1,5 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import gsap from "gsap";
 import React, { useEffect } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 
@@ -26,13 +27,14 @@ const EducationSkillsSection = () => {
 
   return (
     <section id="education" className="py-16 bg-[#0f1629] text-white">
-    
       <div className="max-w-7xl mx-auto px-6">
         {/* Education Section */}
         <div className="mb-16">
           <h2
-            className="text-3xl font-semibold text-center mb-8"
+            className="text-4xl font-bold text-center py-10 text-[#38bdf8] tracking-wide uppercase"
             data-aos="fade-up"
+            onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+            onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
           >
             Education
           </h2>

@@ -1,4 +1,5 @@
 import { Card, Typography } from "@material-tailwind/react";
+import gsap from "gsap";
 
 const About = () => {
   return (
@@ -10,6 +11,9 @@ const About = () => {
             <h1
               className="text-4xl uppercase py-5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8]"
               id="banner-title"
+
+              onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+              onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
             >
               who i am
             </h1>
@@ -18,7 +22,17 @@ const About = () => {
               className="text-lg text-white leading-relaxed"
             >
               Hello! I’m{" "}
-              <span className="font-bold text-[#10b981]">Sazzad Hossain</span>
+              <span
+                onMouseEnter={() =>
+                  gsap.to("#cursor", { scale: 4, duration: 0.3 })
+                }
+                onMouseLeave={() =>
+                  gsap.to("#cursor", { scale: 1, duration: 0.3 })
+                }
+                className="font-bold text-[#10b981]"
+              >
+                Sazzad Hossain
+              </span>
               , a passionate Fontend developer specializing React ,Tailwind
               ,Express mongoDb My focus is on making web development faster,
               easier, and accessible to all developers. Currently, I’m expanding
@@ -35,7 +49,7 @@ const About = () => {
           <div className="lg:w-1/2 flex justify-center">
             <img
               src="https://i.ibb.co/q5C25kb/sazzad.png"
-              alt="Nazmul Hossain"
+              alt="SazzadAdor"
               className="rounded-lg shadow-lg w-80 lg:w-96"
             />
           </div>
