@@ -32,6 +32,21 @@ const Toolkit = () => {
   return (
     <div className="bg-[#0f1629] py-8">
       <div className="w-11/12 mx-auto">
+        <div
+          className="text-center mb-12"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
+          <h1
+            className="text-4xl font-bold   text-[#38bdf8] tracking-wide uppercase"
+            onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+            onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+          >
+            Skills
+          </h1>
+          <p className="text-gray-400 mt-2 text-sm">My Development Tollkit</p>
+          <div className="h-1 w-20 mx-auto bg-[#38bdf8] mt-4 rounded"></div>
+        </div>
         <Marquee
           gradient={false}
           speed={50}

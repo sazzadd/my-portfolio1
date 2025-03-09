@@ -1,9 +1,10 @@
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import Swal from "sweetalert2";  // Import SweetAlert2
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 const ContactForm = () => {
   useEffect(() => {
@@ -51,7 +52,13 @@ const ContactForm = () => {
           className="flex flex-col space-y-4"
           data-aos="fade-right" // AOS animation
         >
-          <h2 className="text-3xl font-bold text-blue-400">Get in Touch</h2>
+          <h2
+            className="text-3xl font-bold text-blue-400"
+            onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
+            onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+          >
+            Get in Touch
+          </h2>
           <p className="text-gray-400">
             Have a question or want to work together? Drop us a message!
           </p>

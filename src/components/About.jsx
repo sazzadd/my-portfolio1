@@ -4,16 +4,13 @@ import gsap from "gsap";
 const About = () => {
   return (
     <div className="bg-[#0f1629] text-white flex items-center justify-center">
-      <Card className="container mx-auto px-6 lg:px-20  bg-transparent shadow-none">
+      <Card className="container mx-auto   bg-transparent shadow-none">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
           {/* Left Content */}
-          <div className="lg:w-1/2 mb-6 lg:mb-0">
+          <div className="lg:w-1/2 px-6 lg:px-4 mb-6 lg:mb-0">
             <h1
               className="text-4xl uppercase py-5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8]"
               id="banner-title"
-
-              onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
-              onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
             >
               who i am
             </h1>

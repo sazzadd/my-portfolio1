@@ -5,7 +5,6 @@ import ContactForm from "../components/ContactForm";
 import EducationSkillsSection from "../components/EducationSkillsSection";
 import Navbar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
-import Skills from "../components/Skills";
 import Toolkit from "../components/Toolkit";
 const Home = () => {
   return (
@@ -13,7 +12,7 @@ const Home = () => {
       <Navbar></Navbar>
       <Banner></Banner>
       <About></About>
-      <Skills></Skills>
+
       <Toolkit></Toolkit>
       <EducationSkillsSection></EducationSkillsSection>
       <ProjectCard></ProjectCard>

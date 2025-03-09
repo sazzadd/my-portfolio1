@@ -68,9 +68,8 @@ const Skills = () => {
       <Card className="container mx-auto px-6 lg:px-20 py-10 bg-transparent shadow-xl rounded-2xl">
         <Typography
           variant="h3"
-          className="font-bold text-[#38bdf8] text-center mb-12 text-3xl"
-          onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
-          onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+          className="font-bold uppercase text-[#38bdf8] text-center mb-12 text-3xl"
+
         >
           My Skills
         </Typography>
@@ -88,7 +87,7 @@ const Skills = () => {
                   <div>{skill.icon}</div>
                   <Typography
                     variant="paragraph"
-                    className="font-semibold text-lg text-gray-300"
+                    className="font-semibold uppercase text-lg divider-vertical text-gray-300"
                   >
                     {skill.name}
                   </Typography>
