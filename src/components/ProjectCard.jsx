@@ -25,7 +25,7 @@ const ProjectCard = () => {
   return (
     <div
       id="projects"
-      className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center px-12 py-16"
+      className="bg-[#0f1629] min-h-screen flex flex-col justify-center items-center  py-16"
     >
       {/* Section Title */}
       <div

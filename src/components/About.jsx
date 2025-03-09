@@ -45,7 +45,7 @@ const About = () => {
           {/* Right Image */}
           <div className="lg:w-1/2 flex justify-center">
             <img
-              src="https://i.ibb.co/q5C25kb/sazzad.png"
+              src="https://i.ibb.co.com/39bPBFj3/453416269-8044969852258740-2748056417136841197-n.jpg"
               alt="SazzadAdor"
               className="rounded-lg shadow-lg w-80 lg:w-96"
             />
