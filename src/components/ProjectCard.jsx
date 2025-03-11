@@ -35,8 +35,7 @@ const ProjectCard = () => {
       >
         <h1
           className="text-4xl font-bold text-[#38bdf8] tracking-wide uppercase"
-          onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
-          onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+       
         >
           Projects
         </h1>
@@ -48,7 +47,7 @@ const ProjectCard = () => {
 
       {/* Project Cards */}
       <div
-        className="grid  grid-cols-1 w-9/12 md:grid-cols-2 lg:grid-cols-3 gap-12"
+        className="grid  grid-cols-1 w-10/12 md:grid-cols-2 lg:grid-cols-3 gap-12"
         data-aos="fade-up"
       >
         {projects.slice(0, 3).map((project) => (
@@ -78,6 +77,12 @@ const ProjectCard = () => {
               <div className="flex justify-between items-center mb-4">
                 <a
                   href={project.livePreview}
+                  onMouseEnter={() =>
+                    gsap.to("#cursor", { scale: 2, duration: 0.3 })
+                  }
+                  onMouseLeave={() =>
+                    gsap.to("#cursor", { scale: 1, duration: 0.3 })
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-400 text-sm flex items-center"
@@ -87,6 +92,12 @@ const ProjectCard = () => {
                 <a
                   href={project.viewCode}
                   target="_blank"
+                  onMouseEnter={() =>
+                    gsap.to("#cursor", { scale: 2, duration: 0.3 })
+                  }
+                  onMouseLeave={() =>
+                    gsap.to("#cursor", { scale: 1, duration: 0.3 })
+                  }
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-400 text-sm flex items-center"
                 >
@@ -95,7 +106,15 @@ const ProjectCard = () => {
               </div>
               <div className="text-center">
                 <Link to={`/project/${project.id}`}>
-                  <a className="bg-[#38bdf8] text-gray-900 px-4 py-2 rounded-md flex items-center justify-center w-full hover:bg-blue-400 transition-colors duration-300">
+                  <a
+                    onMouseEnter={() =>
+                      gsap.to("#cursor", { scale: 3, duration: 0.3 })
+                    }
+                    onMouseLeave={() =>
+                      gsap.to("#cursor", { scale: 1, duration: 0.3 })
+                    }
+                    className="bg-[#38bdf8] text-gray-900 px-4 py-2 rounded-md flex items-center justify-center w-full hover:bg-blue-400 transition-colors duration-300"
+                  >
                     <FaInfoCircle className="mr-2" /> View Details
                   </a>
                 </Link>

@@ -7,7 +7,7 @@ const About = () => {
       <Card className="container mx-auto   bg-transparent shadow-none">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
           {/* Left Content */}
-          <div className="lg:w-1/2 px-6 lg:px-4 mb-6 lg:mb-0">
+          <div className="lg:w-1/2 px-6 lg:px-0 lg:px-4 mb-6 lg:mb-0">
             <h1
               className="text-4xl uppercase py-5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#10b981] to-[#38bdf8]"
               id="banner-title"

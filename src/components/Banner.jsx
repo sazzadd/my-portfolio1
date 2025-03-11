@@ -5,8 +5,8 @@ import React, { useEffect } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 const Banner = () => {
   const handleType = (count) => {
     // console.log(count); // Log word count while typing
@@ -27,7 +27,7 @@ const Banner = () => {
     skills: [
         'HTML', 'CSS',"JavaScript"
         'React', 'ExpressJS', 'MongoDB',
-        'GraphQL', 'Git', 'Linux', 
+ ]      'Git', 'Linux', 
     ],
     hardWorker: true,
 
@@ -45,7 +45,10 @@ const Banner = () => {
   `;
 
   return (
-    <div className="bg-gradient-to-tl from-[#0b1221] to-[#112836] text-white">
+    <div
+      id="banner"
+      className="bg-gradient-to-tl from-[#0b1221] to-[#112836] text-white"
+    >
       <div className="hero flex flex-col lg:flex-row justify-between  lg:w-11/12 mx-auto items-center py-10">
         <div className="w-full lg:w-1/2 px-6  lg:text-left">
           <h1 className="text-4xl lg:text-5xl mt-16 md:m-0 font-bold">Hello</h1>
@@ -81,8 +84,7 @@ const Banner = () => {
               onMouseLeave={() =>
                 gsap.to("#cursor", { scale: 1, duration: 0.3 })
               }
-              href="Resume.pdf"
-              download="Sazzad_Hossain_Resume.pdf"
+              href="https://drive.google.com/uc?export=download&id=1tXHChxehgU1PZOxdab146Xz3TLDjbcOJ"
               className="mt-6 text-center w-[180px] py-2 bg-gradient-to-r from-[#10b981] to-[#38bdf8] 
                text-white rounded-lg shadow-lg transform hover:scale-105 transition-all 
                duration-300 ease-in-out flex items-center justify-center hover:bg-gradient-to-l 

@@ -46,7 +46,7 @@ const ContactForm = () => {
 
   return (
     <div id="contact" className="bg-[#0f1629]">
-      <div className="bg-[#0f1629] w-9/12 mx-auto text-white py-12 px-8 flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="bg-[#0f1629] w-12/12   lg:w-10/12 mx-auto text-white py-12 px-8 flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0 lg:space-x-8">
         {/* Left Section */}
         <div
           className="flex flex-col space-y-4"
@@ -54,8 +54,7 @@ const ContactForm = () => {
         >
           <h2
             className="text-3xl font-bold text-blue-400"
-            onMouseEnter={() => gsap.to("#cursor", { scale: 4, duration: 0.3 })}
-            onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+      
           >
             Get in Touch
           </h2>
