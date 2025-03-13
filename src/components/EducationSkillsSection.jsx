@@ -23,7 +23,7 @@ const EducationSkillsSection = () => {
   }, []);
 
   return (
-    <section id="education" className="py-16 bg-[#0f1629] text-white">
+    <section id="education" className="py-8 bg-[#0f1629] text-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
         <h2

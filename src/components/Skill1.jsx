@@ -7,9 +7,9 @@ const Skill1 = () => {
   return (
     <div
       id="skills"
-      className="px-2  bg-[#0f1629] text-white py-8 flex flex-col items-center justify-center"
+      className="px-2  bg-[#0f1629] text-white py-8  flex flex-col items-center justify-center"
     >
-      <h1 className="text-4xl font-bold   text-[#38bdf8] tracking-wide uppercase">
+      <h1 className="text-4xl font-bold pt-6  text-[#38bdf8] tracking-wide uppercase">
         Skills
       </h1>
       <div className="">
@@ -82,10 +82,7 @@ const Skill1 = () => {
         <h1 className="text-xl text-center py-4"> Backend</h1>
         <div className="flex flex-wrap gap-3">
           <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
-            <a
-              href="https://nodejs.org/"
-              className=""
-            >
+            <a href="https://nodejs.org/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
                 className="p-2"
@@ -96,13 +93,10 @@ const Skill1 = () => {
             </a>
           </div>
           <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
-            <a
-              href="https://expressjs.com/"
-              className=""
-            >
+            <a href="https://expressjs.com/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
-                 className="p-2"
+                className="p-2"
                 src="https://i.ibb.co.com/VYwgXkCr/express.png"
                 alt="Express"
                 title="Express"
@@ -131,18 +125,13 @@ const Skill1 = () => {
               />
             </a>
           </div>
-          
         </div>
-        
       </div>
       <div className="">
         <h1 className="text-xl text-center py-4"> Tools & Technology</h1>
         <div className="flex flex-wrap gap-3">
           <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
-            <a
-              href="https://git-scm.com/"
-              className=""
-            >
+            <a href="https://git-scm.com/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
                 className="p-2"
@@ -153,10 +142,7 @@ const Skill1 = () => {
             </a>
           </div>
           <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
-            <a
-              href="https://github.com/"
-              className=""
-            >
+            <a href="https://github.com/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
                 className="p-2"
@@ -177,8 +163,6 @@ const Skill1 = () => {
               />
             </a>
           </div>
-         
-          
         </div>
       </div>
     </div>
