@@ -113,7 +113,7 @@ const Skill1 = () => {
             <a href="https://www.mongodb.com/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
-                className=""
+                className="p-2"
                 src="https://i.ibb.co.com/84c69JQt/mongo.png"
                 alt="MongoDB"
                 title="MongoDB"
@@ -124,13 +124,60 @@ const Skill1 = () => {
             <a href="https://www.mongodb.com/" className="">
               <img
                 onMouseEnter={handleMouseEnter}
-                className=""
+                className="p-2"
                 src="https://i.ibb.co.com/1ftG3NMW/firebase.png"
                 alt="firebase"
                 title="firebase"
               />
             </a>
           </div>
+          
+        </div>
+        
+      </div>
+      <div className="">
+        <h1 className="text-xl text-center py-4"> Tools & Technology</h1>
+        <div className="flex flex-wrap gap-3">
+          <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
+            <a
+              href="https://git-scm.com/"
+              className=""
+            >
+              <img
+                onMouseEnter={handleMouseEnter}
+                className="p-2"
+                src="https://i.ibb.co.com/qM2qf6Px/git.png"
+                alt="GIT"
+                title="GIT"
+              />
+            </a>
+          </div>
+          <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
+            <a
+              href="https://github.com/"
+              className=""
+            >
+              <img
+                onMouseEnter={handleMouseEnter}
+                className="p-2"
+                src="https://i.ibb.co.com/xKn8W15H/github.png"
+                alt="Github"
+                title="Github"
+              />
+            </a>
+          </div>
+          <div className="border-2 h-20 w-20 border-[#38bdf8] rounded">
+            <a href="https://www.npmjs.com/" className="">
+              <img
+                onMouseEnter={handleMouseEnter}
+                className="p-2"
+                src="https://i.ibb.co.com/WN14c5Ws/npm.png"
+                alt="NPM"
+                title="NPM"
+              />
+            </a>
+          </div>
+         
           
         </div>
       </div>
