@@ -6,13 +6,14 @@ import EducationSkillsSection from "../components/EducationSkillsSection";
 import Navbar from "../components/NavBar";
 import ProjectCard from "../components/ProjectCard";
 import Toolkit from "../components/Toolkit";
+import Skill1 from "../components/Skill1";
 const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
       <Banner></Banner>
       <About></About>
-
+      <Skill1></Skill1>
       <Toolkit></Toolkit>
       <EducationSkillsSection></EducationSkillsSection>
       <ProjectCard></ProjectCard>
