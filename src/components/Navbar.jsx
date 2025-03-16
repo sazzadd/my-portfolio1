@@ -41,7 +41,7 @@ const Navbar = () => {
       >
         <div className="bg-[#112836] w-auto max-w-[200px] xs:max-w-[240px] sm:max-w-sm md:max-w-[900px] px-1 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full border border-[#38bdf8] sm:border-2 shadow-lg relative">
           {/* Hamburger Menu Button - Visible on mobile/medium */}
-          <button
+          {/* <button
             className="md:hidden sm:hidden absolute left-1.5 top-1/2 transform -translate-y-1/2 text-white p-1"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -51,7 +51,7 @@ const Navbar = () => {
             ) : (
               <FaBars className="text-base" />
             )}
-          </button>
+          </button> */}
 
           {/* Desktop Navigation - Hidden on mobile */}
           <ul className="hidden md:flex flex-wrap justify-between items-center text-white text-xs sm:text-sm">
