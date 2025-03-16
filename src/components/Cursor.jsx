@@ -33,10 +33,10 @@ const Cursor = () => {
 
   return (
     <>
-      <div
+      {/* <div
         id="cursor"
         className="h-[20px] w-[20px] bg-[#2b74cd79] fixed top-0 left-0 rounded-full z-50 pointer-events-none"
-      ></div>
+      ></div> */}
     </>
   );
 };

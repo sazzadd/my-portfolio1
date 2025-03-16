@@ -3,13 +3,15 @@ import About from "../components/About";
 import Banner from "../components/Banner";
 import ContactForm from "../components/ContactForm";
 import EducationSkillsSection from "../components/EducationSkillsSection";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
 import Skill1 from "../components/Skill1";
+
 const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
+      {/* <NavBar1></NavBar1> */}
       <Banner></Banner>
       <About></About>
       <Skill1></Skill1>

@@ -50,7 +50,7 @@ const ContactForm = () => {
         {/* Left Section */}
         <div
           className="flex flex-col space-y-4"
-          data-aos="fade-right" // AOS animation
+          // data-aos="fade-right" // AOS animation
         >
           <h2
             className="text-3xl font-bold text-blue-400"
@@ -80,7 +80,7 @@ const ContactForm = () => {
         {/* Right Section */}
         <div
           className="bg-[#121c3b] p-6 rounded-lg shadow-lg w-full lg:w-1/2"
-          data-aos="fade-left" // AOS animation
+          // data-aos="fade-left" // AOS animation
         >
           <form
             ref={form}
